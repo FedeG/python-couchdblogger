@@ -1,6 +1,14 @@
 python-couchdblogger
 ====================
 
+Tests adn requirements:
+-----------------------
+
+[![Build Status](https://drone.io/github.com/FedeG/python-couchdblogger/status.png)](https://drone.io/github.com/FedeG/python-couchdblogger/latest) [![Requirements Status](https://requires.io/github/FedeG/python-couchdblogger/requirements.svg?branch=master)](https://requires.io/github/FedeG/python-couchdblogger/requirements/?branch=master)
+
+Documentation:
+--------------
+
 Simple module for logging to CouchDB. 
 Probably not best choise for logging backend, because CouchDB is not good with massive write operations. 
 
@@ -42,8 +50,3 @@ Script to run tests:
 Run nosetests with coverage:
 
     nosetests --with-coverage; coverage report
-
-Tests:
------
-
-[![Build Status](https://drone.io/github.com/FedeG/python-couchdblogger/status.png)](https://drone.io/github.com/FedeG/python-couchdblogger/latest)
