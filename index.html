@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Python-couchdblogger : Python CouchDB logging handler">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Python-couchdblogger</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/FedeG/python-couchdblogger">View on GitHub</a>
+
+          <h1 id="project_title">Python-couchdblogger</h1>
+          <h2 id="project_tagline">Python CouchDB logging handler</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/FedeG/python-couchdblogger/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/FedeG/python-couchdblogger/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="python-couchdblogger" class="anchor" href="#python-couchdblogger" aria-hidden="true"><span class="octicon octicon-link"></span></a>python-couchdblogger</h1>
+
+<h2>
+<a id="tests-adn-requirements" class="anchor" href="#tests-adn-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests adn requirements:</h2>
+
+<p><a href="https://drone.io/github.com/FedeG/python-couchdblogger/latest"><img src="https://drone.io/github.com/FedeG/python-couchdblogger/status.png" alt="Build Status"></a> <a href="https://requires.io/github/FedeG/python-couchdblogger/requirements/?branch=master"><img src="https://requires.io/github/FedeG/python-couchdblogger/requirements.svg?branch=master" alt="Requirements Status"></a></p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation:</h2>
+
+<p>Simple module for logging to CouchDB. 
+Probably not best choise for logging backend, because CouchDB is not good with massive write operations. </p>
+
+<pre><code>https://pypi.python.org/pypi/couchdblogger
+</code></pre>
+
+<p>Usage:</p>
+
+<pre><code>import couchdblogger
+
+logger = logging.getLogger('mylogger')
+logger.setLevel('ERROR')
+logger.addHandler(couchdblogger.CouchDBLogHandler())
+</code></pre>
+
+<p>Usage with ssl:</p>
+
+<pre><code>import couchdblogger
+
+logger = logging.getLogger('mylogger')
+logger.setLevel('ERROR')
+logger.addHandler(couchdblogger.CouchDBLogHandler(ssl=True, request_args={"verify": True}))
+</code></pre>
+
+<h2>
+<a id="script-to-run-tests" class="anchor" href="#script-to-run-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Script to run tests:</h2>
+
+<p>1- Install:</p>
+
+<pre><code>python setup.py install
+pip install mock
+pip install nose
+</code></pre>
+
+<p>2- Run tests:</p>
+
+<pre><code>python setup.py test
+</code></pre>
+
+<p>or:</p>
+
+<pre><code>nosetests -vv
+</code></pre>
+
+<p>Run nosetests with coverage:</p>
+
+<pre><code>nosetests --with-coverage; coverage report
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Python-couchdblogger maintained by <a href="https://github.com/FedeG">FedeG</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
